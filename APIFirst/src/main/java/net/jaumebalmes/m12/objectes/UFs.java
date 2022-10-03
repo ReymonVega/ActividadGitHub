@@ -26,7 +26,5 @@ public class UFs {
 		this.posicio = posicio;
 	}
 	
-	
-	
 }
 

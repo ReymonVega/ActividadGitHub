@@ -6,7 +6,16 @@ public class Alumne {
 		    private String cognoms;
 		    private LocalDate dataNaixement;
 		    private String centre;
-		    private int curs;  
+		    private int curs;
+		    
+		    public Alumne(String nom, String cognoms,LocalDate datNaixement, String centre, int curs) {
+		    	super();
+		    	this.nom = nom;
+		    	this.cognoms = cognoms;
+		    	this.dataNaixement = dataNaixement;
+		    	this.centre = centre;
+		    	this.curs = curs;
+		    }
 		    
 		    public String getNom(){
 		        return nom; 
