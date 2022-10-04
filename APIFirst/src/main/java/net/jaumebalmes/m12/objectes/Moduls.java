@@ -22,7 +22,7 @@ public class Moduls {
     }
     
     //Constructor
-    public Moduls(String nombreDelModul, int duracion, String ufsModuls) {
+    public Moduls(String nombreDelModul, int duracion ) {
         this.nombreDelModul = nombreDelModul;
         this.duracion = duracion;
     }
