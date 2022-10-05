@@ -8,7 +8,7 @@ public class Alumne {
 		    private String centre;
 		    private int curs;
 		    
-		    public Alumne(String nom, String cognoms,LocalDate datNaixement, String centre, int curs) {
+		    public Alumne(String nom, String cognoms, LocalDate dataNaixement, String centre, int curs) {
 		    	super();
 		    	this.nom = nom;
 		    	this.cognoms = cognoms;
