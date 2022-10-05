@@ -33,7 +33,7 @@ public class Moduls {
     
     
     
-    //Constructork
+    //Constructor
     public Moduls(String nombreDelModul, int duracion, String asistenciaModuls) {
         this.nombreDelModul = nombreDelModul;
         	this.duracion = duracion;
