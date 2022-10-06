@@ -4,6 +4,7 @@ package net.jaumebalmes.m12.objectes;
 public class Moduls {
     private String nombreDelModul;
     private int duracion;
+    private String asistenciaModuls;
 
     public String getNombreDelModul() {
         return nombreDelModul;
@@ -21,10 +22,22 @@ public class Moduls {
         this.duracion = duracion;
     }
     
+    public String getAsistenciaModuls(){
+        return asistenciaModuls;
+    }
+
+    public void setAsistenciaModuls(String asistenciaModuls) {
+        this.asistenciaModuls = asistenciaModuls;
+    }
+    
+    
+    
+    
     //Constructor
-    public Moduls(String nombreDelModul, int duracion, String ufsModuls) {
+    public Moduls(String nombreDelModul, int duracion, String asistenciaModuls) {
         this.nombreDelModul = nombreDelModul;
-        this.duracion = duracion;
+        	this.duracion = duracion;
+        		this.asistenciaModuls = asistenciaModuls;
     }
     
     
