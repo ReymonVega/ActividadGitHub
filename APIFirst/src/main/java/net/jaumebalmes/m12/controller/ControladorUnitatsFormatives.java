@@ -3,9 +3,12 @@ package net.jaumebalmes.m12.controller;
 import java.util.ArrayList;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 import net.jaumebalmes.m12.objectes.UFs;
 
+@RestController
 public class ControladorUnitatsFormatives {
 	
 	@GetMapping("unitatsFormatives")
@@ -19,15 +22,15 @@ public class ControladorUnitatsFormatives {
 		return unitatsFormatives;
 	}
 	
-	@GetMapping("unitatFormativa")
-	public ArrayList<UFs> getUnitatFormativa() {
-		ArrayList<UFs> unitatsFormativa = new ArrayList<>();
+	@GetMapping("unitatFormativa/{idUF}")
+	public UFs getUnitatFormativa(@PathVariable int idUF) {
+		ArrayList<UFs> unitatFormativa = new ArrayList<>();
 		
-		unitatsFormativa.add(new UFs("Projecte de desenvolupament d'aplicacions web",1));
-		unitatsFormativa.add(new UFs("Projecte de desenvolupament d'aplicacions web2",2));
-		unitatsFormativa.add(new UFs("Projecte de desenvolupament d'aplicacions web3",3));
+		unitatFormativa.add(new UFs("Projecte de desenvolupament d'aplicacions web",1));
+		unitatFormativa.add(new UFs("Projecte de desenvolupament d'aplicacions web2",2));
+		unitatFormativa.add(new UFs("Projecte de desenvolupament d'aplicacions web3",3));
 		
-		return unitatsFormativa;
+		return unitatFormativa.get(idUF -1);
 	}
 	
 }
