@@ -2,58 +2,102 @@ package net.jaumebalmes.m12.objectes;
 import java.time.LocalDate;
 public class Alumne {
 	 
-	    private String nom;
-	    private String cognoms;
-	    private LocalDate dataNaixement;
-	    private String centre;
-	    private String curs;
-	    
-	    public Alumne(String nom, String cognoms, LocalDate dataNaixement, String centre, String curs) {
-	    	super();
-	    	this.nom = nom;
-	    	this.cognoms = cognoms;
-	    	this.dataNaixement = dataNaixement;
-	    	this.centre = centre;
-	    	this.curs = curs;
-	    }
-	    
-	    public String getNom(){
-	        return nom; 
-	    }
-	    
-	    public void setNom(String nom){
-	        this.nom = nom;
-	    }
-	    
-	    public String getCognoms(){
-	        return cognoms;
-	    }
-	    
-	    public void  setCognoms(String cognoms){
-	        this.cognoms = cognoms;
-	    }
+	 private String nom;
+	 private String cognoms;
+	 private LocalDate dataNaixement;
+	 private String email;
+	 private String cicle;
+	 private String grup;
+	 private int curs;
+	 
+	 public Alumne(String nom, String cognoms, LocalDate dataNaixement, String email, String cicle, String grup,
+			int curs) {
+		super();
+		this.nom = nom;
+		this.cognoms = cognoms;
+		this.dataNaixement = dataNaixement;
+		this.email = email;
+		this.cicle = cicle;
+		this.grup = grup;
+		this.curs = curs;
+	}
 
-	    public LocalDate getDataNaixement(){
-	        return dataNaixement;
-	    }
+	public Alumne(String nom, String cognoms, LocalDate dataNaixement, String email, int curs) {
+		super();
+		this.nom = nom;
+		this.cognoms = cognoms;
+		this.dataNaixement = dataNaixement;
+		this.email = email;
+		this.curs = curs;
+	}
+	
+	public Alumne() {
+		
+	}
 
-	    public void setDataNaixement(LocalDate dataNaixement){
-	        this.dataNaixement = dataNaixement;
-	    }
+	public String getNom() {
+		return nom;
+	}
 
-	    public String getCentre(){
-	        return centre; 
-	    }
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
 
-	    public void setCentre(String centre){
-	        this.centre = centre;
-	    }
+	public String getCognoms() {
+		return cognoms;
+	}
 
-	    public int getCurs(int curs){
-	        return curs;
-	    }
+	public void setCognoms(String cognoms) {
+		this.cognoms = cognoms;
+	}
 
-	    public void setCurs(String curs){
-	        this.curs = curs;
-	    }
+	public LocalDate getDataNaixement() {
+		return dataNaixement;
+	}
+
+	public void setDataNaixement(LocalDate dataNaixement) {
+		this.dataNaixement = dataNaixement;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getCurs() {
+		return curs;
+	}
+
+	public void setCurs(int curs) {
+		this.curs = curs;
+	}
+
+	public String getCicle() {
+		return cicle;
+	}
+
+	public void setCicle(String cicle) {
+		this.cicle = cicle;
+	}
+
+	public String getGrup() {
+		return grup;
+	}
+
+	public void setGrup(String grup) {
+		this.grup = grup;
+	}
+
+	@Override
+	public String toString() {
+		return "Alumne [nom=" + nom + ", cognoms=" + cognoms + ", dataNaixement=" + dataNaixement + ", email=" + email
+				+ ", curs=" + curs + "]";
+	}
+	
+	
+	 
+	 
 }

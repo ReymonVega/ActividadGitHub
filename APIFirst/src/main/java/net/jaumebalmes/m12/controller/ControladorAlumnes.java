@@ -14,30 +14,20 @@ import net.jaumebalmes.m12.objectes.Alumne;
 @RestController
 public class ControladorAlumnes {
 	
-	@GetMapping("alumnes")
-	public List<Alumne> getAlumnes(){
+	@GetMapping("alumnes/{grup}")
+	public ArrayList<Alumne> getAlumnesGrup(@PathVariable String grup) {
 		ArrayList<Alumne> alumnes = new ArrayList<>();
-
-		alumnes.add(new Alumne("Javier","Corona Alba",LocalDate.of(2000,Month.MAY, 17),"Jaume Balmes","DAW2"));
-		alumnes.add(new Alumne("Roger","Sobrino Gil",LocalDate.of(2000,Month.MAY, 26),"Jaume Balmes","DAW2"));
-		alumnes.add(new Alumne("Gerard","Martinez Perez",LocalDate.of(2000,Month.MAY, 26),"Jaume Balmes","DAW2"));
-		alumnes.add(new Alumne("Xavi","Casco Lopez",LocalDate.of(2000,Month.MAY, 26),"Jaume Balmes","DAW2"));
-		alumnes.add(new Alumne("Miquel","Alvarez Redondo",LocalDate.of(2000,Month.MAY, 26),"Jaume Balmes","DAW2"));
 		
-		return alumnes;
-	}
-	
-	@GetMapping("alumnes/{idAlumne}")
-	public Alumne getAlumne(@PathVariable int idAlumne) {
-		ArrayList<Alumne> alumnes = new ArrayList<>();
+		ArrayList<Alumne> resultat = new ArrayList<>();
 
-		alumnes.add(new Alumne("Javier","Corona Alba",LocalDate.of(2000,Month.MAY, 17),"Jaume Balmes","DAW2"));
-		alumnes.add(new Alumne("Roger","Sobrino Gil",LocalDate.of(2000,Month.MAY, 26),"Jaume Balmes","DAW2"));
-		alumnes.add(new Alumne("Gerard","Martinez Perez",LocalDate.of(2000,Month.MAY, 26),"Jaume Balmes","DAW2"));
-		alumnes.add(new Alumne("Xavi","Casco Lopez",LocalDate.of(2000,Month.MAY, 26),"Jaume Balmes","DAW2"));
-		alumnes.add(new Alumne("Miquel","Alvarez Redondo",LocalDate.of(2000,Month.MAY, 26),"Jaume Balmes","DAW2"));
+		alumnes.add(new Alumne("Matias","Rodriguez Saldaña", LocalDate.of(2002, 11, 6),"mrodrigu@jaumebalmes.net","DAW","DAW2",2));
+		alumnes.add(new Alumne("Matias","Rodriguez Saldaña", LocalDate.of(2002, 11, 6),"mrodrigu@jaumebalmes.net","ASIX","ASIX2",2));
 		
-		return alumnes.get(idAlumne -1);
+		for (int i=0; i<alumnes.size();i++) {
+			if(alumnes.get(i).getGrup().equals(grup)) {
+				resultat.add(alumnes.get(i));
+			}
+		}
+		return resultat;
 	}
-	
 }
