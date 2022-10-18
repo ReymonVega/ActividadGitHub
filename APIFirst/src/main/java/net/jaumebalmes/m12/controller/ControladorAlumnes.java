@@ -14,6 +14,18 @@ import net.jaumebalmes.m12.objectes.Alumne;
 @RestController
 public class ControladorAlumnes {
 	
+	//LO MIO 
+		@GetMapping("alumnes")
+		public List<Alumne> getAlumnes() {
+			ArrayList<Alumne> alumnes = new ArrayList<>();	
+			
+
+			alumnes.add(new Alumne("Reymon","Vega Trujillo", LocalDate.of(2001, 8, 16),"rvega@jaumebalmes.net","DAW","DAW2",2));
+			alumnes.add(new Alumne("Matias","Rodriguez Saldaña", LocalDate.of(2002, 11, 6),"mrodrigu@jaumebalmes.net","ASIX","ASIX2",2));
+		
+			return alumnes;
+		}
+	
 	@GetMapping("alumnes/{grup}")
 	public ArrayList<Alumne> getAlumnesGrup(@PathVariable String grup) {
 		ArrayList<Alumne> alumnes = new ArrayList<>();
