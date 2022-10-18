@@ -1,10 +1,10 @@
 package net.jaumebalmes.m12.objectes;
 
 public class Curs {
-	 private String cicle; /*daw*/
-	    private String grup;    /*daw1 */
-	    private int aula;   /*45 */
-	    private int curs;    /*1 */
+	 private String cicle;
+	    private String grup;
+	    private int aula;   
+	    private int curs;    
 
 	    public Curs(String cicle, String grup, int aula, int curs) {
 

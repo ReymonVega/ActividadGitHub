@@ -10,7 +10,7 @@ import net.jaumebalmes.m12.objectes.Curs;
 @RestController
 public class ControladorCurs {
 	
-    @GetMapping("Cursn")
+    @GetMapping("Curs")
     public List<Curs> getCurs() {
         ArrayList<Curs> cursos = new ArrayList<>();
         
