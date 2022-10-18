@@ -14,7 +14,6 @@ import net.jaumebalmes.m12.objectes.Alumne;
 @RestController
 public class ControladorAlumnes {
 	
-	//LO MIO 
 		@GetMapping("alumnes")
 		public List<Alumne> getAlumnes() {
 			ArrayList<Alumne> alumnes = new ArrayList<>();	
