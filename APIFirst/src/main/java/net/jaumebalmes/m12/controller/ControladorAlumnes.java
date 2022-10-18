@@ -10,11 +10,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.jaumebalmes.m12.objectes.Alumne;
-
+	
 @RestController
 public class ControladorAlumnes {
 	
-	//LO MIO 
 		@GetMapping("alumnes")
 		public List<Alumne> getAlumnes() {
 			ArrayList<Alumne> alumnes = new ArrayList<>();	
