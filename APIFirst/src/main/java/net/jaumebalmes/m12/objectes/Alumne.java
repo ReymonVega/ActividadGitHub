@@ -89,15 +89,6 @@ public class Alumne {
 
 	public void setGrup(String grup) {
 		this.grup = grup;
-	}
-
-	@Override
-	public String toString() {
-		return "Alumne [nom=" + nom + ", cognoms=" + cognoms + ", dataNaixement=" + dataNaixement + ", email=" + email
-				+ ", curs=" + curs + "]";
-	}
-	
-	
-	 
+	}	 
 	 
 }
