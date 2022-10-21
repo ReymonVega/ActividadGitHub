@@ -15,6 +15,7 @@ public class Alumne {
 	@Id // clau a la taula de la BD
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	
 	private String nomAlumne;
 	private String cognomAlumne;
 	private LocalDate data;
