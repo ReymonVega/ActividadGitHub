@@ -23,6 +23,18 @@ public class AlumnesController {
 		return alumne;
 	}
 	
-	
-	
+/*
+	 @DeleteMapping(value = "/alumness/{id}")
+	    public ResponseEntity<Long> deletePost(@PathVariable Long id) {
+
+	        var isRemoved = AlumnesRepository.delete(id);
+
+	        if (!isRemoved) {
+	            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+	        }
+
+	        return new ResponseEntity<>(id, HttpStatus.OK);
+	    }
+	}
+*/
 }
