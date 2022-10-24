@@ -13,13 +13,14 @@ public class Alumne {
 	
 	
 	@Id // clau a la taula de la BD
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	
 	private String nomAlumne;
 	private String cognomAlumne;
 	private LocalDate data;
 	
-	public Alumne(String nomAlumne, String cognomAlumne, LocalDate data) {
+	public Alumne(long id, String nomAlumne, String cognomAlumne, LocalDate data) {
 		super();
 		this.id = id;
 		this.nomAlumne = nomAlumne;
