@@ -18,19 +18,18 @@ import net.jaumebalmes.m12.entitats.Alumne;
 import net.jaumebalmes.m12.repos.AlumnesRepository;
 
 @RestController
-@RequestMapping("api")
 public class AlumnesController {
 	
 	@Autowired     //diu a Spring que crei ell l'objecte
 	AlumnesRepository alumeRepo; //no cal fer new ja que ho fa Spring
 	
-	@GetMapping("clients/{id}")
-	public Alumne getClient(@PathVariable long id) {
+	@GetMapping("alumnes/{id}")
+	public Alumne getAlumne(@PathVariable long id) {
 		
 		return alumeRepo.findById(id).get();
 	}
 	
-	@GetMapping("clients")
+	@GetMapping("alumnes")
 	public Iterable<Alumne> getClients() {
 		
 		return alumeRepo.findAll();
