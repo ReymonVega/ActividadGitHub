@@ -10,8 +10,8 @@ public class Alumne {
 	 private String grup;
 	 private int curs;
 	 
-	 public Alumne(String nom, String cognoms, LocalDate dataNaixement, String email, String cicle, String grup,
-			int curs) {
+	 public Alumne(String nom, String cognoms, LocalDate dataNaixement, String email, String cicle, String grup, int curs) {
+		 
 		super();
 		this.nom = nom;
 		this.cognoms = cognoms;
