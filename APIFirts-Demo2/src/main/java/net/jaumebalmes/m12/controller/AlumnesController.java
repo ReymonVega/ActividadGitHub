@@ -22,11 +22,11 @@ import net.jaumebalmes.m12.repos.CursRepository;
 import net.jaumebalmes.m12.repos.AlumnesRepository;
 
 @RestController
+@RequestMapping("api")
 public class AlumnesController {
 	
 	@Autowired     //diu a Spring que crei ell l'objecte
 	AlumnesRepository alumneRepo; //no cal fer new ja que ho fa Spring
-	
 	@GetMapping("alumne/{id}")
 	public Alumne getAlumne(@PathVariable long id) {
 		
@@ -62,6 +62,25 @@ public class AlumnesController {
 		alumneRepo.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+	
+	@PutMapping ("alumnes/{id}")
+    public ResponseEntity<Alumne> updateAlumnes(@PathVariable long id, @RequestBody Alumne alumne) {
+        Alumne updateAlumnes = alumneRepo.findById(id).orElseThrow();
+
+
+        updateAlumnes.setNom(alumne.getNom());
+        updateAlumnes.setCognoms(alumne.getCognoms());
+        updateAlumnes.setDataNaixement(alumne.getdata());	
+        updateAlumnes.setEmail(alumne.getEmail());
+        updateAlumnes.setCicle(alumne.getCicle());
+        updateAlumnes.setGrup(alumne.getGrup());
+        updateAlumnes.setCurs(alumne.getCurs());
+
+        alumneRepo.save(updateAlumnes);
+
+        return ResponseEntity.ok(updateAlumnes);
+    }
+	 
 	//@DeleteMapping("clients/{id}")
 	
 
