@@ -46,16 +46,15 @@ public class AlumnesController {
 	}
 	
 	@PostMapping("alumnes")
-<<<<<<< HEAD
 	public Alumne altaClient(@RequestBody Alumne alumne) {
 		
-		alumeRepo.save(alumne);
+		alumneRepo.save(alumne);
 		
-=======
+
 	public Alumne altaAlumne(@RequestBody Alumne alumne) {
 		
 		alumneRepo.save(alumne);
->>>>>>> main
+
 		return alumne;
 	}
 	
@@ -64,15 +63,12 @@ public class AlumnesController {
 		alumneRepo.deleteById(id);
         return ResponseEntity.noContent().build();
     }
-	
-<<<<<<< HEAD
-	
 	//@DeleteMapping("clients/{id}")
 	
 	//@PutMapping("clients")
-=======
+
 	//@PutMapping("alumnes")
->>>>>>> main
+
 
 
 }
