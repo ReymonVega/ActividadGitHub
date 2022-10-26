@@ -1,7 +1,7 @@
 package net.jaumebalmes.m12.objectes;
 
 public class Curs {
-	 private String cicle;
+	 	private String cicle;
 	    private String grup;
 	    private int aula;   
 	    private int curs;    
