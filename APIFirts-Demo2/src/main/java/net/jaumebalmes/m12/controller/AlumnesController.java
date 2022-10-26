@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -47,16 +46,9 @@ public class AlumnesController {
 	}
 	
 	@PostMapping("alumnes")
-<<<<<<< HEAD
-	public Alumne altaClient(@RequestBody Alumne alumne) {
-		
-		alumeRepo.save(alumne);
-		
-=======
 	public Alumne altaAlumne(@RequestBody Alumne alumne) {
 		
 		alumneRepo.save(alumne);
->>>>>>> main
 		return alumne;
 	}
 	
@@ -66,20 +58,7 @@ public class AlumnesController {
         return ResponseEntity.noContent().build();
     }
 	
-<<<<<<< HEAD
-	//@PatchMapping("alumnes/{id}")
-	//public ResponseEntity<Alumne> patchAlumne(@PathVariable Long id){
-		//alumeRepo.patchById(id);
-		//alumeRepo.save(id);
-		//return ResponseEntity.noContent().build();
-	//}
-	
-	//@DeleteMapping("clients/{id}")
-	
-	//@PutMapping("clients")
-=======
 	//@PutMapping("alumnes")
->>>>>>> main
 
 
 }
