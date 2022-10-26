@@ -9,13 +9,17 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import net.jaumebalmes.m12.entitats.Alumne;
 import net.jaumebalmes.m12.entitats.Curs;
 import net.jaumebalmes.m12.repos.CursRepository;
 
 @RestController
+@RequestMapping("api")
 public class CursController {
 	
 	@Autowired     //diu a Spring que crei ell l'objecte
@@ -46,6 +50,22 @@ public class CursController {
         return ResponseEntity.noContent().build();
     }
 	
-	//@PutMapping("alumnes")
+	@PutMapping ("cursos/{id}")
+    public ResponseEntity<Curs> updateCurs(@PathVariable long id, @RequestBody Curs curs) {
+        Curs updateCurs = cursRepo.findById(id).orElseThrow();
+
+
+        updateCurs.setCicle(curs.getCicle());
+        updateCurs.setGrup(curs.getGrup());
+        updateCurs.setAula(curs.getAula());	
+        updateCurs.setCurs(curs.getCurs());
+      
+
+        cursRepo.save(updateCurs);
+
+        return ResponseEntity.ok(updateCurs);
+    }
+	
+	
 	
 }
