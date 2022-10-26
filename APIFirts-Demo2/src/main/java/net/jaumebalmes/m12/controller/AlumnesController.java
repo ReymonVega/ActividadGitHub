@@ -16,45 +16,63 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.jaumebalmes.m12.entitats.Alumne;
+import net.jaumebalmes.m12.entitats.Curs;
+import net.jaumebalmes.m12.repos.CursRepository;
 import net.jaumebalmes.m12.repos.AlumnesRepository;
 
 @RestController
 public class AlumnesController {
 	
 	@Autowired     //diu a Spring que crei ell l'objecte
-	AlumnesRepository alumeRepo; //no cal fer new ja que ho fa Spring
+	AlumnesRepository alumneRepo; //no cal fer new ja que ho fa Spring
 	
-	@GetMapping("alumnes/{id}")
+	@GetMapping("alumne/{id}")
 	public Alumne getAlumne(@PathVariable long id) {
 		
-		return alumeRepo.findById(id).get();
+		return alumneRepo.findById(id).get();
+	}
+	
+	@GetMapping("alumnes/{grup}")
+	public Alumne getAlumneGrup(@PathVariable String grup) {
+		
+		
+		return null;
 	}
 	
 	@GetMapping("alumnes")
 	public Iterable<Alumne> getAlumnes() {
 		
-		return alumeRepo.findAll();
+		return alumneRepo.findAll();
 	}
 	
 	@PostMapping("alumnes")
+<<<<<<< HEAD
 	public Alumne altaClient(@RequestBody Alumne alumne) {
 		
 		alumeRepo.save(alumne);
 		
+=======
+	public Alumne altaAlumne(@RequestBody Alumne alumne) {
+		
+		alumneRepo.save(alumne);
+>>>>>>> main
 		return alumne;
 	}
 	
-	
 	@DeleteMapping("alumnes/{id}")
     public ResponseEntity<Alumne>  deleteAlumne(@PathVariable Long id) {
-        alumeRepo.deleteById(id);
+		alumneRepo.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 	
+<<<<<<< HEAD
 	
 	//@DeleteMapping("clients/{id}")
 	
 	//@PutMapping("clients")
+=======
+	//@PutMapping("alumnes")
+>>>>>>> main
 
 
 }
