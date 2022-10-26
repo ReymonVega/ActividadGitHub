@@ -1,6 +1,7 @@
 package net.jaumebalmes.m12.controller;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,10 +34,11 @@ public class AlumnesController {
 	}
 	
 	@GetMapping("alumnes/{grup}")
-	public Alumne getAlumneGrup(@PathVariable String grup) {
+	public List<Alumne> getAlumneGrup(@PathVariable String grup) {
 		
+		List<Alumne> alumnesGrup = alumneRepo.findByGrup(grup);
 		
-		return null;
+		return alumnesGrup;
 	}
 	
 	@GetMapping("alumnes")

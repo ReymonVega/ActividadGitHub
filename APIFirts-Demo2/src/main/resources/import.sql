@@ -1,6 +1,6 @@
-INSERT INTO ALUMNE (NOM, COGNOMS, DATA, EMAIL, CICLE, GRUP, CURS) VALUES ('Joan', 'Petit', '2020-12-21', 'mrodrigu@jaumebalmes.net', 'DAW', 'DAW2', 2);
+INSERT INTO ALUMNE (NOM, COGNOMS, DATA, EMAIL, CICLE, GRUP, CURS) VALUES ('Joan', 'Petit', '2020-12-21', 'mrodrigu@jaumebalmes.net', 'DAW', 'DAW1', 2);
 INSERT INTO ALUMNE (NOM, COGNOMS, DATA, EMAIL, CICLE, GRUP, CURS) VALUES ('Matias', 'Rodriguez', '2020-12-21', 'mrodrigu@jaumebalmes.net', 'DAW', 'DAW2', 2);
-INSERT INTO ALUMNE (NOM, COGNOMS, DATA, EMAIL, CICLE, GRUP, CURS) VALUES ('Julio', 'Cruzetta', '2020-12-21', 'mrodrigu@jaumebalmes.net', 'DAW', 'DAW2', 2);
+INSERT INTO ALUMNE (NOM, COGNOMS, DATA, EMAIL, CICLE, GRUP, CURS) VALUES ('Julio', 'Cruzetta', '2020-12-21', 'mrodrigu@jaumebalmes.net', 'DAW', 'DAM2', 2);
 
 INSERT INTO CURS (CICLE, GRUP, AULA, CURS) VALUES ('DAW','DAW1',45,1);
 INSERT INTO CURS (CICLE, GRUP, AULA, CURS) VALUES ('DAM','DAM2',47,2);
