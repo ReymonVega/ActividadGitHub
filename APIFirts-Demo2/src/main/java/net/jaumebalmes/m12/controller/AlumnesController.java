@@ -31,17 +31,17 @@ public class AlumnesController {
 	}
 	
 	@GetMapping("alumnes")
-	public Iterable<Alumne> getClients() {
+	public Iterable<Alumne> getAlumnes() {
 		
 		return alumeRepo.findAll();
 	}
 	
-	@PostMapping("clients")
-	public Alumne altaClient(@RequestBody Alumne client) {
+	@PostMapping("alumnes")
+	public Alumne altaClient(@RequestBody Alumne alumne) {
 		
-		alumeRepo.save(client);
+		alumeRepo.save(alumne);
 		
-		return client;
+		return alumne;
 	}
 	
 	
@@ -50,6 +50,7 @@ public class AlumnesController {
         alumeRepo.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+	
 	
 	//@DeleteMapping("clients/{id}")
 	
